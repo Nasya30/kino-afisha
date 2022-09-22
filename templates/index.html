@@ -78,16 +78,15 @@
                <div class="movies_main">
                   <div class="iamge_movies_main">
                      {% for i in films %}
-
                      <div class="iamge_movies">
                         <div class="image_3">
-                           <img src="{{i.pic.url}}" class="image" style="width:100%">
+                           <img src="{{i.pic.url}}" class="image" style="width:400px; height:200px;">
                            <div class="middle">
                               <div class="playnow_bt">Play Now</div>
                            </div>
                         </div>
                         <h1 class="code_text">{{i.title}}</h1>
-                        <p class="there_text">{{i.about}} </p>
+                        <p class="there_text">{{i.about|truncatechars:50}} </p>
                         <p class="there_text">{{i.categ}} </p>
                         <div class="star_icon">
                            {% load my_filter %}

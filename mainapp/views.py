@@ -13,5 +13,8 @@ class FilmsView(ListView):
         context = super().get_context_data(**kwargs)
         context["range"]= range()
 
+    def get_queryset(self):
+        return FilmsModel.objects.filter(is_exclusive=True)[:3]
+
 
 
